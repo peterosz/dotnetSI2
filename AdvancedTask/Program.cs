@@ -14,17 +14,17 @@ namespace AdvancedTask
         static List<FileSystemWatcher> watchers;
         static List<DirectoryInfo> archiveDirs;
 
-        static void RecursiveSearch(List<FileInfo> foundFiles, string fileName, DirectoryInfo currentDirectory)
+        static void RecursiveSearch(List<FileInfo> foundFiles, string fileName, string fileType, DirectoryInfo currentDirectory)
         {
             foreach (FileInfo fil in currentDirectory.GetFiles())
             {
-                if (fil.Name == fileName)
+                if (fil.Name.Contains(fileName) && fil.Name.Contains(fileType))
                     foundFiles.Add(fil);
             }
             //continue the search recursively
             foreach (DirectoryInfo dir in currentDirectory.GetDirectories())
             {
-                RecursiveSearch(foundFiles, fileName, dir);
+                RecursiveSearch(foundFiles, fileName, fileType, dir);
             }
         }
 
@@ -63,6 +63,9 @@ namespace AdvancedTask
         static void Main(string[] args)
         {
             string fileName = args[0];
+            fileName = fileName.Replace("*", "");
+            string fileType = fileName.Substring(fileName.Length - 4, fileName.Length-1);
+            fileName = fileName.Substring(0, fileName.Length - 4);
             string directoryName = args[1];
             FoundFiles = new List<FileInfo>();
             watchers = new List<FileSystemWatcher>();
@@ -76,7 +79,7 @@ namespace AdvancedTask
             }
 
             //search recursively for the mathing files
-            RecursiveSearch(FoundFiles, fileName, rootDir);
+            RecursiveSearch(FoundFiles, fileName, fileType, rootDir);
             //list the found files
             Console.WriteLine("Found {0} files.", FoundFiles.Count);
             foreach (FileInfo fil in FoundFiles)
