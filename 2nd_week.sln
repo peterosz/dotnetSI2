@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2006
+VisualStudioVersion = 15.0.27004.2008
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2nd_week", "2nd_week\2nd_week.csproj", "{9884F172-FCAE-4673-8BAE-6FEB108CB814}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeekAndArchive", "SeekAndArchive\SeekAndArchive.csproj", "{9C280DC3-9B2D-41FB-9202-A0E0BC469B8D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9884F172-FCAE-4673-8BAE-6FEB108CB814}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9884F172-FCAE-4673-8BAE-6FEB108CB814}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9884F172-FCAE-4673-8BAE-6FEB108CB814}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9884F172-FCAE-4673-8BAE-6FEB108CB814}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C280DC3-9B2D-41FB-9202-A0E0BC469B8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C280DC3-9B2D-41FB-9202-A0E0BC469B8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C280DC3-9B2D-41FB-9202-A0E0BC469B8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C280DC3-9B2D-41FB-9202-A0E0BC469B8D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
